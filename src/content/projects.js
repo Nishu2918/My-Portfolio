@@ -1,0 +1,48 @@
+export const projects = [
+  {
+    slug: 'bone-age-estimation',
+    title: 'Bone Age Estimation',
+    description: 'An AI/ML-powered application for estimating bone age from medical imaging data using deep learning.',
+    longDescription: 'A machine learning project that uses deep learning models to estimate bone age from radiographic images. Built with JavaScript, it integrates AI model inference into a web-based interface, making medical imaging analysis accessible through the browser. Combines computer vision techniques with a user-friendly frontend.',
+    image: '/bone-age-preview.png',
+    tags: ['JavaScript', 'AI/ML', 'Deep Learning', 'Medical'],
+    category: 'fullstack',
+    github: 'https://github.com/Nishu2918/Bone-Age-Estimation',
+    live: null,
+    featured: true,
+    year: '2026',
+  },
+  {
+    slug: 'user-management-dashboard',
+    title: 'User Management Dashboard',
+    description: 'An admin dashboard for managing users with CRUD operations, search, and filtering capabilities.',
+    longDescription: 'A comprehensive user management dashboard built with JavaScript. Features include creating, reading, updating, and deleting user records, advanced search and filtering, pagination, and a clean admin interface. Designed with a focus on usability and efficient data management.',
+    image: '/dashboard-preview.png',
+    tags: ['JavaScript', 'React', 'Dashboard', 'CRUD'],
+    category: 'frontend',
+    github: 'https://github.com/Nishu2918/user-management-dashboard',
+    live: null,
+    featured: true,
+    year: '2025',
+  },
+  {
+    slug: 'recipe-explorer',
+    title: 'Recipe Explorer',
+    description: 'A recipe discovery app that lets users search, browse, and explore recipes with a clean, intuitive UI.',
+    longDescription: 'A recipe exploration application built with JavaScript that integrates with external APIs to fetch and display recipes. Features include search functionality, category filtering, detailed recipe views with ingredients and instructions, and a responsive design optimized for all devices.',
+    image: '/recipe-preview.png',
+    tags: ['JavaScript', 'API Integration', 'React'],
+    category: 'frontend',
+    github: 'https://github.com/Nishu2918/recipe-explorer-app',
+    live: null,
+    featured: true,
+    year: '2025',
+  },
+]
+
+export const categories = [
+  { key: 'all', label: 'All Projects' },
+  { key: 'fullstack', label: 'Full Stack' },
+  { key: 'frontend', label: 'Frontend' },
+  { key: 'backend', label: 'Backend' },
+]

@@ -1,0 +1,62 @@
+---
+title: "Building a Design System from Scratch"
+date: "2026-06-15"
+excerpt: "How I built a cohesive design system for my projects — from color tokens and typography to reusable components."
+tags: ["Design Systems", "React", "CSS"]
+readingTime: "8 min read"
+---
+
+Every developer eventually faces the same problem: you're building your third project and notice you're copying the same button styles, the same color values, the same spacing patterns. It's time for a design system.
+
+## Why Build Your Own?
+
+There are excellent design systems out there — Shadcn, Radix, Chakra. So why build your own? For me, it came down to three things:
+
+1. **Learning** — Understanding design principles deeply
+2. **Control** — Every decision is intentional
+3. **Consistency** — A single source of truth across projects
+
+## Starting with Tokens
+
+Design tokens are the atoms of your system. They're the smallest decisions that everything else builds on.
+
+```css
+@theme {
+  --color-paper: #FBF7F0;
+  --color-ink: #24211B;
+  --color-accent: #E86A33;
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+}
+```
+
+I chose a warm, editorial palette — cream backgrounds, warm ink tones, and a burnt orange accent. The naming matters: `paper` and `ink` instead of `background` and `foreground` reinforces the editorial feel.
+
+## Component Architecture
+
+Each component follows a simple pattern:
+
+- **Props for variants** — `variant="primary"`, `size="lg"`
+- **Composition over configuration** — Small, composable pieces
+- **Motion as a first-class concern** — Animations built in, respecting `prefers-reduced-motion`
+
+```jsx
+function Button({ variant = 'primary', size = 'md', children }) {
+  return (
+    <motion.button
+      whileTap={{ scale: 0.97 }}
+      className={cn(variants[variant], sizes[size])}
+    >
+      {children}
+    </motion.button>
+  );
+}
+```
+
+## Lessons Learned
+
+The biggest lesson: **start small**. You don't need 50 components on day one. Start with Button, Card, Badge, and Input. Add more as you need them.
+
+The second lesson: **document as you go**. If you can't explain why a decision was made, it'll get overridden in a month.
+
+Design systems are never finished — they grow with your projects. And that's exactly the point.

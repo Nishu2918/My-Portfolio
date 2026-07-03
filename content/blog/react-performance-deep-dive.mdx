@@ -1,0 +1,60 @@
+---
+title: "A Deep Dive into React Performance"
+date: "2026-05-20"
+excerpt: "Practical strategies for making React apps faster — from render optimization to bundle splitting."
+tags: ["React", "Performance", "JavaScript"]
+readingTime: "12 min read"
+---
+
+Performance isn't about making things fast — it's about making things *feel* fast. Here's what I've learned from optimizing React applications in production.
+
+## The Render Cascade
+
+The most common performance issue in React is unnecessary re-renders. A parent re-renders, all children re-render, and suddenly your list of 500 items is doing work it doesn't need to.
+
+```jsx
+// Before: every item re-renders when count changes
+function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <button onClick={() => setCount(c => c + 1)}>{count}</button>
+      <ExpensiveList items={items} />
+    </div>
+  );
+}
+```
+
+The fix isn't always `React.memo`. Often it's **composition** — restructuring your component tree so state lives closer to where it's used.
+
+```jsx
+// After: Counter is isolated, List never re-renders
+function Counter() {
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(c => c + 1)}>{count}</button>;
+}
+
+function App() {
+  return (
+    <div>
+      <Counter />
+      <ExpensiveList items={items} />
+    </div>
+  );
+}
+```
+
+## Bundle Size Matters
+
+Every kilobyte of JavaScript is code the browser has to download, parse, and execute. Here's my checklist:
+
+- **Lazy load routes** — `React.lazy()` with `Suspense`
+- **Tree-shake imports** — `import { format } from 'date-fns'` not `import * as dateFns`
+- **Analyze your bundle** — Use `vite-plugin-visualizer` to find the big chunks
+- **Question every dependency** — Do you really need that 40kb animation library?
+
+## Measuring What Matters
+
+Don't optimize blindly. Use the React DevTools Profiler, Lighthouse, and real user monitoring. Fix what your users actually experience, not what looks bad in a flamegraph.
+
+The best optimization is the one your users notice.
