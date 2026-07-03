@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'Nishanth',
-  title: 'Nishanth — Full Stack Developer',
+  title: 'Nishanth - Full Stack Developer',
   description: 'I build things for the web.',
   url: 'https://nishanth.dev',
   email: 'nishanthhs8@gmail.com',

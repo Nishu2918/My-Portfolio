@@ -16,7 +16,7 @@ export function ProjectsPage() {
       <SectionHeading
         label="Projects"
         title="Things I've built"
-        description="A collection of projects I've worked on — from full-stack apps to open source tools."
+        description="A collection of projects I've worked on - from full-stack apps to open source tools."
       />
 
       <ProjectFilterBar active={filter} onChange={setFilter} />

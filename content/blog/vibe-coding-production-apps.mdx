@@ -1,0 +1,172 @@
+---
+title: "Vibe Coding: How I Build Production-Level Apps with AI"
+date: "2026-07-03"
+excerpt: "Vibe coding isn't just hype - it's a real workflow. Here's how I use AI tools to ship production-grade applications faster, with the right prompts and patterns."
+tags: ["Vibe Coding", "AI", "Productivity", "Claude"]
+readingTime: "10 min read"
+---
+
+There's a new way to build software, and it's called **vibe coding**. The term was coined by Andrej Karpathy, and the idea is simple: you describe what you want in natural language, and an AI writes the code. You guide, review, and ship.
+
+But here's the thing most people get wrong - vibe coding isn't about blindly accepting AI output. It's about **collaborating with AI** as a force multiplier. Done right, it lets you build production-level applications in hours instead of weeks.
+
+I've been using this workflow to build real projects, and in this post, I'll share exactly how.
+
+## What is Vibe Coding?
+
+Vibe coding is a development workflow where you:
+
+1. **Describe the intent** - Tell the AI what you want to build
+2. **Review and iterate** - Check the output, give feedback, refine
+3. **Stay in the driver's seat** - You make the architectural decisions
+
+It's not "no-code." You still need to understand code, architecture, and best practices. The AI handles the typing; you handle the thinking.
+
+## My Setup
+
+Here's my current vibe coding stack:
+
+- **Claude Code** - My primary AI coding assistant. It reads my codebase, understands context, and writes code that actually fits
+- **VS Code** - Still my editor of choice, now with Claude Code extension
+- **React + Vite + Tailwind** - My go-to frontend stack
+- **Node.js / Python** - Backend depending on the project
+
+## The Art of Prompting for Production Code
+
+The biggest mistake people make with vibe coding is writing vague prompts. Here's what separates toy projects from production apps:
+
+### Bad Prompt
+> "Build me a todo app"
+
+You'll get a basic todo app. It works, but it's not production-ready.
+
+### Good Prompt
+> "Build a task management app with React and Tailwind. It needs user authentication, a Kanban board with drag-and-drop, real-time updates with WebSockets, and a PostgreSQL database. Use proper error handling, loading states, and optimistic updates. Structure the code with separate concerns - hooks, components, and API layers."
+
+See the difference? The second prompt tells the AI:
+- **What** to build (task management, not just todos)
+- **How** to build it (specific tech stack)
+- **Quality expectations** (error handling, loading states)
+- **Architecture** (separation of concerns)
+
+### My Prompt Framework
+
+I follow this structure for every feature I build:
+
+```
+1. CONTEXT: What the project is and what exists already
+2. GOAL: What I want to achieve
+3. CONSTRAINTS: Tech stack, patterns to follow, things to avoid
+4. QUALITY: Error handling, edge cases, accessibility
+5. REFERENCES: "Similar to how X works" or "Inspired by Y"
+```
+
+## Real Example: Building This Portfolio
+
+This very portfolio you're reading was built with vibe coding. Here's how a real session looked:
+
+**My prompt:**
+> "Build a premium developer portfolio inspired by Lee Robinson and Josh Comeau. Clean editorial light theme with dark mode. React + Vite + Tailwind v4. Pages: Hero, About, Projects, Blog with MDX, Contact with EmailJS. Custom animations - not copying anyone's exact style. Profile photo with animated decorations. Tech stack scrolling marquee."
+
+From that single prompt, I got:
+- A complete project structure
+- Theme system with dark/light mode
+- Animated navbar with active pill indicator
+- Hero section with typewriter effect
+- MDX blog system with syntax highlighting
+- Contact form that actually sends emails
+
+Then I iterated. "The cards look clumsy." "Add more space between timeline items." "Make the profile photo animation more premium." Each round of feedback made it better.
+
+## Production Patterns I Always Include
+
+When vibe coding production apps, I make sure every prompt includes these:
+
+### 1. Error Boundaries
+```
+"Add error handling for API failures. Show user-friendly error messages,
+not raw error objects. Include retry mechanisms where appropriate."
+```
+
+### 2. Loading States
+```
+"Every async operation needs a loading state. Use skeleton loaders
+for content, spinners for actions. No blank screens."
+```
+
+### 3. Responsive Design
+```
+"Mobile-first design. Test on 375px, 768px, and 1440px viewpoints.
+Navigation should collapse to a hamburger on mobile."
+```
+
+### 4. Accessibility
+```
+"Use semantic HTML. All images need alt text. Interactive elements
+need focus states. Support keyboard navigation."
+```
+
+### 5. Performance
+```
+"Lazy load images. Code-split routes. Minimize bundle size.
+Use proper caching headers."
+```
+
+## Common Mistakes to Avoid
+
+**1. Accepting everything without reading it**
+
+AI-generated code can have subtle bugs. Always read what it writes. I've caught issues with:
+- Missing null checks
+- Incorrect API error handling
+- CSS that works on desktop but breaks on mobile
+
+**2. Not providing enough context**
+
+The AI doesn't know your codebase unless you tell it. Start sessions with context: "We're using Tailwind v4 with CSS-based config, not the old tailwind.config.js."
+
+**3. Trying to build everything in one prompt**
+
+Break it down. Build the layout first, then add interactivity, then polish animations. Each step builds on the last.
+
+**4. Ignoring the architecture**
+
+Just because AI writes fast doesn't mean you should skip planning. Decide your folder structure, state management approach, and API patterns before you start prompting.
+
+## The Workflow That Works
+
+Here's my actual workflow for building a production feature:
+
+1. **Plan** - Sketch the feature on paper or in my head. What components? What data flow?
+2. **Scaffold** - Ask AI to set up the structure: routes, components, types
+3. **Build** - Implement feature by feature, reviewing each step
+4. **Polish** - Add animations, loading states, error handling
+5. **Test** - Run it in the browser. Test edge cases. Try to break it
+6. **Deploy** - Push to GitHub, auto-deploy on Vercel
+
+## Is Vibe Coding the Future?
+
+I think so, but with a caveat: **it makes good developers faster, not bad developers good.**
+
+You still need to:
+- Understand what good code looks like
+- Know when the AI is wrong
+- Make architectural decisions
+- Debug when things break
+
+Vibe coding is a tool, not a replacement. The developers who embrace it will ship 10x more. The ones who resist it will wonder how everyone else moves so fast.
+
+## Start Today
+
+If you haven't tried vibe coding yet:
+
+1. Pick a project you've been putting off
+2. Set up Claude Code or your preferred AI tool
+3. Start with a detailed prompt using my framework above
+4. Iterate, review, and ship
+
+The best code is code that ships. Vibe coding helps you ship faster without sacrificing quality.
+
+---
+
+*Have questions about vibe coding or want to see how I built a specific feature? Reach out on [LinkedIn](https://www.linkedin.com/in/nishanth-hs/) or drop me a message on the [contact page](/contact).*

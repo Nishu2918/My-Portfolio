@@ -18,7 +18,7 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="container-page pt-12 pb-16 md:pt-20 md:pb-24 relative">
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
-          {/* Left — text */}
+          {/* Left - text */}
           <div className="flex-1 text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -87,7 +87,7 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — profile photo */}
+          {/* Right - profile photo */}
           <div className="shrink-0">
             <ProfilePhoto />
           </div>

@@ -46,7 +46,7 @@ export const skillCategories = [
 
 export const timeline = [
   {
-    year: 'Feb 2026 — Present',
+    year: 'Feb 2026 - Present',
     title: 'Associate AI Engineer',
     company: 'Sash.Ai',
     location: 'Bengaluru, Karnataka, India',
@@ -55,7 +55,7 @@ export const timeline = [
     current: true,
   },
   {
-    year: 'Nov 2025 — Jan 2026',
+    year: 'Nov 2025 - Jan 2026',
     title: 'Full Stack Developer Intern',
     company: 'Sash.Ai',
     location: 'Bengaluru, Karnataka, India',
@@ -64,7 +64,7 @@ export const timeline = [
     current: false,
   },
   {
-    year: 'Jun 2025 — Aug 2025',
+    year: 'Jun 2025 - Aug 2025',
     title: 'Software Development Engineer',
     company: 'Open Course',
     location: 'Remote',
@@ -73,7 +73,7 @@ export const timeline = [
     current: false,
   },
   {
-    year: 'Oct 2024 — Nov 2024',
+    year: 'Oct 2024 - Nov 2024',
     title: 'Python Web Developer',
     company: 'Infosys Foundation',
     location: 'Mysore, Karnataka, India',

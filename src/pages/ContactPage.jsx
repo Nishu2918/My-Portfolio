@@ -14,7 +14,7 @@ export function ContactPage() {
       />
 
       <div className="grid lg:grid-cols-5 gap-10 lg:gap-16">
-        {/* Form — takes 3 cols */}
+        {/* Form - takes 3 cols */}
         <div className="lg:col-span-3">
           <FadeIn>
             <div className="bg-paper-raised border border-border rounded-2xl p-6 md:p-8">
@@ -26,7 +26,7 @@ export function ContactPage() {
           </FadeIn>
         </div>
 
-        {/* Sidebar — takes 2 cols */}
+        {/* Sidebar - takes 2 cols */}
         <div className="lg:col-span-2 space-y-6">
           <FadeIn delay={0.1}>
             <div className="bg-paper-raised border border-border rounded-2xl p-6">
