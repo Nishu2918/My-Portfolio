@@ -1,8 +1,6 @@
 # My Personal MERN Stack Portfolio
 
-<p align="center">
-  <img src="https://munna-scriptz.vercel.app/preview.png" alt="Portfolio Preview" width="700" />
-</p>
+
 
 <p align="center">
   A modern, animated, and performance-focused developer portfolio built with React and motion-first design principles.
