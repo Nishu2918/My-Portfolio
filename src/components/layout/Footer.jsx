@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { motion } from 'framer-motion'
-import { FiGithub, FiLinkedin, FiMail, FiArrowUpRight, FiHeart } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail, FiArrowUpRight } from 'react-icons/fi'
 import { SOCIALS, NAV_LINKS } from '../../lib/constants'
 import { Magnetic } from '../motion/Magnetic'
 import { FadeIn } from '../motion/FadeIn'
@@ -122,10 +122,11 @@ export function Footer() {
           {/* Bottom bar */}
           <div className="mt-12 pt-6 border-t border-border">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <p className="text-xs text-ink-muted flex items-center gap-1">
-                &copy; {new Date().getFullYear()} Nishanth. Built with
-                <FiHeart size={11} className="text-accent" />
-                using React & Tailwind
+              <p className="text-xs text-ink-muted">
+                Designed & built by Nishanth.
+                <br className="sm:hidden" />
+                <span className="hidden sm:inline"> </span>
+                &copy; {new Date().getFullYear()} All rights reserved.
               </p>
 
               {/* Scroll to top */}
