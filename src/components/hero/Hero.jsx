@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiGithub } from 'react-icons/fi'
 import { Button } from '../ui/Button'
-import { TextReveal } from '../motion/TextReveal'
+import DecryptedText from '../motion/DecryptedText'
 import { TypewriterText } from '../motion/TypewriterText'
 import { Magnetic } from '../motion/Magnetic'
 import { ProfilePhoto } from './ProfilePhoto'
@@ -36,13 +36,27 @@ export function Hero() {
             </motion.div>
 
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-ink leading-[1.15] tracking-tight">
-              <TextReveal delay={0.1}>
-                I build things
-              </TextReveal>
+              <DecryptedText
+                text="I build things"
+                speed={100}
+                maxIterations={20}
+                sequential={true}
+                revealDirection="start"
+                animateOn="view"
+                className="text-ink"
+                encryptedClassName="text-ink-muted/40"
+              />
               <br />
-              <TextReveal delay={0.3} className="text-accent">
-                for the web.
-              </TextReveal>
+              <DecryptedText
+                text="for the web."
+                speed={100}
+                maxIterations={20}
+                sequential={true}
+                revealDirection="start"
+                animateOn="view"
+                className="text-accent"
+                encryptedClassName="text-accent/30"
+              />
             </h1>
 
             <motion.div
@@ -79,7 +93,7 @@ export function Hero() {
                 </Button>
               </Magnetic>
               <Magnetic strength={0.2}>
-                <Button href="https://github.com/nishanth" variant="secondary">
+                <Button href="https://github.com/Nishu2918" variant="secondary">
                   <FiGithub size={16} />
                   GitHub
                 </Button>
