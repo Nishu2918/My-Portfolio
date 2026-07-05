@@ -5,6 +5,7 @@ import DecryptedText from '../motion/DecryptedText'
 import { TypewriterText } from '../motion/TypewriterText'
 import { Magnetic } from '../motion/Magnetic'
 import { ProfilePhoto } from './ProfilePhoto'
+import ParticleField from '../motion/ParticleField'
 
 const ROLES = [
   'Associate AI Engineer',
@@ -16,6 +17,15 @@ const ROLES = [
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
+      <ParticleField
+        particleCount={70}
+        particleSize={1.8}
+        speed={0.25}
+        connectionDistance={100}
+        mouseRadius={130}
+        color="180, 100, 50"
+        className="opacity-40"
+      />
       <div className="container-page pt-12 pb-16 md:pt-20 md:pb-24 relative">
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
           {/* Left - text */}
